@@ -148,4 +148,4 @@ const init = () => {
     createManager();
 }
 
-init() 
+init(); 
