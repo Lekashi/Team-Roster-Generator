@@ -1,5 +1,3 @@
-const Engineer = require("../lib/Engineer");
-
 const makeTeam = team => {
    
     const generateManagerCard = manager => {
