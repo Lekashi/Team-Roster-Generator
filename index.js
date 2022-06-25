@@ -142,14 +142,14 @@ const init = () => {
 
 
 
-    function buildTeam () {
+    function buildTeam() {
         fs.writeFile("./dist/index.html", renderTeam(teamMemberObjArray), (err) => {
             if (err)
-              console.log(err);
+                console.log(err);
             else {
                 console.log("You successfully added your team members!");
             }
-    })
+        })
     }
 
 

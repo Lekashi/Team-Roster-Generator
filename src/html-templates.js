@@ -1,7 +1,7 @@
 const makeTeam = team => {
-   
-    const generateManagerCard = manager => {
-        return `
+
+  const generateManagerCard = manager => {
+    return `
         <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">${manager.name}</h5>
@@ -13,10 +13,10 @@ const makeTeam = team => {
         </ul>
         </div>
         `
-    }
+  }
 
-    const generateEngineerCard = engineer => {
-        return `
+  const generateEngineerCard = engineer => {
+    return `
         <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">${engineer.name}</h5>
@@ -28,10 +28,10 @@ const makeTeam = team => {
         </ul>
         </div>
         `
-    }
+  }
 
-    const generateInternCard = intern => {
-        return `
+  const generateInternCard = intern => {
+    return `
         <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">${intern.name}</h5>
@@ -43,30 +43,30 @@ const makeTeam = team => {
         </ul>
         </div>
         `
-    }
+  }
 
-    const html = []; 
+  const html = [];
 
-    html.push(team
-        .filter(employee => employee.getRole() === "Manager")
-        .map(manager => generateManagerCard(manager))    
-    )
+  html.push(team
+    .filter(employee => employee.getRole() === "Manager")
+    .map(manager => generateManagerCard(manager))
+  )
 
-    html.push(team
-        .filter(employee => employee.getRole() === "Engineer")
-        .map(engineer => generateEngineerCard(engineer))    
-    )
+  html.push(team
+    .filter(employee => employee.getRole() === "Engineer")
+    .map(engineer => generateEngineerCard(engineer))
+  )
 
-    html.push(team
-        .filter(employee => employee.getRole() === "Intern")
-        .map(intern => generateInternCard(intern))    
-    )
+  html.push(team
+    .filter(employee => employee.getRole() === "Intern")
+    .map(intern => generateInternCard(intern))
+  )
 
-    return html.join("")
+  return html.join("")
 }
 
 module.exports = team => {
-    return `
+  return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
